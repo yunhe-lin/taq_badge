@@ -42,26 +42,26 @@ class AQBadgeView extends StatelessWidget {
 
   _badgeDetailView() {
     String detail = _showText();
-    double width = 24;
+    double width = 18;
     if (detail.length == 3) {
-      width = 36;
+      width = 24;
     }
     if (detail.length == 2) {
-      width = 30;
+      width = 20;
     }
     Widget view = AQBadgePositionView(
             new Center(
                 child: new Container(
-                  height: 24,
+                  height: 18,
                   width: width,
                 padding: new EdgeInsets.all(3),
                 decoration: new BoxDecoration(
-                  color: Color(0xffff3c3c),
+                  color: Color(0xE5ff3c3c),
                   borderRadius: BorderRadius.all(
                     Radius.circular(12),
                   ),
                 ),
-                child: new Text(detail, textAlign: TextAlign.center,),
+                child: new Text(detail, textAlign: TextAlign.center, style: this.style,),
               ),
               ));
     return this.count > 0 ? view : new Container();
