@@ -8,6 +8,7 @@ class AQBadgeView extends StatelessWidget {
   final TAQPosition position;
   final Color badgeColor;
   final TextStyle style;
+  final EdgeInsets padding;
   @required
   final WidgetBuilder target;
 
@@ -17,7 +18,8 @@ class AQBadgeView extends StatelessWidget {
       this.target, 
       this.position=TAQPosition.topEnd, 
       this.style = const TextStyle(fontSize: 10, color: Colors.white),
-      this.badgeColor: const Color(0xffff3c3c)
+      this.badgeColor: const Color(0xffff3c3c),
+      this.padding = const EdgeInsets.all(3)
     }
   ) : this.count = count < 0 ? 0 : count;
 
@@ -54,7 +56,7 @@ class AQBadgeView extends StatelessWidget {
                 child: new Container(
                   height: 18,
                   width: width,
-                padding: new EdgeInsets.all(3),
+                padding: this.padding,
                 decoration: new BoxDecoration(
                   color: Color(0xE5ff3c3c),
                   borderRadius: BorderRadius.all(
