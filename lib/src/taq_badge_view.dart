@@ -56,7 +56,7 @@ class AQBadgeView extends StatelessWidget {
                 child: new Container(
                   height: 18,
                   width: width,
-                padding: this.padding,
+                  padding: new EdgeInsets.all(3),
                 decoration: new BoxDecoration(
                   color: Color(0xE5ff3c3c),
                   borderRadius: BorderRadius.all(
@@ -65,7 +65,8 @@ class AQBadgeView extends StatelessWidget {
                 ),
                 child: new Text(detail, textAlign: TextAlign.center, style: this.style,),
               ),
-              ));
+              ),
+              padding: this.padding,);
     return this.count > 0 ? view : new Container();
   }
 
