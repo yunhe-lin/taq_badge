@@ -63,7 +63,9 @@ class AQBadgeView extends StatelessWidget {
                     Radius.circular(12),
                   ),
                 ),
-                child: new Text(detail, textAlign: TextAlign.center, style: this.style,),
+                child: Center(
+                  child: new Text(detail, textAlign: TextAlign.center, style: this.style,)
+                )
               ),
               ),
               padding: this.padding,);
