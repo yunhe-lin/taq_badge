@@ -56,7 +56,7 @@ class AQBadgeView extends StatelessWidget {
                 child: new Container(
                   height: 18,
                   width: width,
-                  padding: padding,
+                  margin: EdgeInsets.all(3),
                 decoration: new BoxDecoration(
                   color: badgeColor,
                   borderRadius: BorderRadius.all(
