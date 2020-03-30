@@ -17,9 +17,9 @@ class AQBadgeView extends StatelessWidget {
     {
       this.target, 
       this.position=TAQPosition.topEnd, 
-      this.style = const TextStyle(fontSize: 10, color: Colors.white),
+      this.style = const TextStyle(fontSize: 10, color: Colors.white, fontWeight: FontWeight.bold),
       this.badgeColor: const Color(0xE5ff3c3c),
-      this.padding = const EdgeInsets.all(3)
+      this.padding = const EdgeInsets.fromLTRB(5, 0, 5, 0)
     }
   ) : this.count = count < 0 ? 0 : count;
 
@@ -44,23 +44,23 @@ class AQBadgeView extends StatelessWidget {
 
   _badgeDetailView() {
     String detail = _showText();
-    double width = 18;
+    double width = 16;
     if (detail.length == 3) {
       width = 24;
     }
     if (detail.length == 2) {
-      width = 20;
+      width = 19;
     }
     Widget view = AQBadgePositionView(
             new Center(
                 child: new Container(
-                  height: 18,
+                  height: 16,
                   width: width,
                   margin: EdgeInsets.all(3),
                 decoration: new BoxDecoration(
                   color: badgeColor,
                   borderRadius: BorderRadius.all(
-                    Radius.circular(12),
+                    Radius.circular(8),
                   ),
                 ),
                 child: Center(
